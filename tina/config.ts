@@ -48,6 +48,40 @@ export default defineConfig({
           },
         ],
       },
+      {
+        name: "page",
+        label: "Pages",
+        path: "",
+        match: {
+          include: "*.{md,markdown}",
+          exclude: "_posts/**/*",
+        },
+        fields: [
+          {
+            type: "string",
+            name: "title",
+            label: "Title",
+            isTitle: true,
+            required: true,
+          },
+          {
+            type: "string",
+            name: "layout",
+            label: "Layout",
+          },
+          {
+            type: "string",
+            name: "permalink",
+            label: "Permalink",
+          },
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Body",
+            isBody: true,
+          },
+        ],
+      },
     ],
   },
 });
